@@ -5,19 +5,18 @@
 
 	<onload>Dialog.Close(1110)</onload>
 
-	
 	<controls>
 
 		<!-- Background image -->
 		<include>DialogFadeBackgroundImage</include>
 		<control type="group">
-			<animation effect="slide" start="-450,0" time="200">WindowOpen</animation>
-			<animation effect="slide" end="-450,0" time="200">WindowClose</animation>
+			<animation effect="slide" start="-650,0" time="250">WindowOpen</animation>
+			<animation effect="slide" end="-650,0" time="250">WindowClose</animation>
 
 			<control type="image">
-				<left>0</left>
+				<left>-200</left>
 				<top>0</top>
-				<width>450</width>
+				<width>650</width>
 				<height>1080</height>
 				<texture colordiffuse="$VAR[OverlayColor]">dialogs/Background.png</texture>
 			</control>
