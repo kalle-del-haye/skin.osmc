@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- addonbrowser -->
-	<backgroundcolor>0x00000000</backgroundcolor>
+	<backgroundcolor>0xff000000</backgroundcolor>
 	<defaultcontrol always="true">500</defaultcontrol>
 	<views>500</views>
 	<onload condition="String.IsEmpty(Skin.String(WelcomeDialogShown)) + !System.HasAddon(service.osmc.settings)">ActivateWindow(1101)</onload>
