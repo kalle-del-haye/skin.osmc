@@ -27,20 +27,30 @@
 		<height>1080</height>
 	</include>
 
+	<!-- Cinemascope dimensions -->
+	<include name="CinemascopeDimensions">
+		<left>-183</left>
+		<top>-103</top>
+		<width>2286</width>
+		<height>1286</height>
+	</include>
+
 	<!-- Window background image -->
 	<include name="WindowBackgroundImage">
 		<param name="isHomeWindow">False</param>
 		<param name="animate">False</param>
 		<definition>
 			<control type="videowindow">
-				<include>FullscreenDimensions</include>
+				<include condition="!Skin.HasSetting(Cinemascope)">FullscreenDimensions</include>
+				<include condition="Skin.HasSetting(Cinemascope)">CinemascopeDimensions</include>
 				<visible>Player.HasVideo + Skin.HasSetting(BackgroundVideo)</visible>
 				<visible>!$PARAM[animate]</visible>
 			</control>
 
 			<!-- Water Image -->
 			<control type="image">
-				<include>FullscreenDimensions</include>
+				<include condition="!Skin.HasSetting(Cinemascope)">FullscreenDimensions</include>
+				<include condition="Skin.HasSetting(Cinemascope)">CinemascopeDimensions</include>
 				<texture background="true">$VAR[OSMCBackgroundImage]</texture>
 				<visible>![Player.HasVideo + Skin.HasSetting(BackgroundVideo)]</visible>
 				<visible>!$PARAM[animate]</visible>
@@ -48,7 +58,8 @@
 
 			<!-- Background Image -->
 			<control type="image" id="10000">
-				<include>FullscreenDimensions</include>
+				<include condition="!Skin.HasSetting(Cinemascope)">FullscreenDimensions</include>
+				<include condition="Skin.HasSetting(Cinemascope)">CinemascopeDimensions</include>
 				<texture background="true" fallback="transparent.png">$VAR[widgetBackground]</texture>
 				<fadetime>400</fadetime>
 				<visible>![Player.HasVideo + Skin.HasSetting(BackgroundVideo)]</visible>
@@ -59,7 +70,8 @@
 
 			<!-- Artists Slideshow -->
 			<control type="multiimage">
-				<include>FullscreenDimensions</include>
+				<include condition="!Skin.HasSetting(Cinemascope)">FullscreenDimensions</include>
+				<include condition="Skin.HasSetting(Cinemascope)">CinemascopeDimensions</include>
 				<imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
 				<aspectratio>keep</aspectratio>
 				<timeperimage>10000</timeperimage>
@@ -70,13 +82,15 @@
 
 			<!-- Visualisation -->
 			<control type="visualisation">
-				<include>FullscreenDimensions</include>
+				<include condition="!Skin.HasSetting(Cinemascope)">FullscreenDimensions</include>
+				<include condition="Skin.HasSetting(Cinemascope)">CinemascopeDimensions</include>
 				<visible>Player.HasAudio + Skin.HasSetting(BackgroundVisualisation) + !String.Contains(Window(Videos).Property(TvTunesIsAlive),True)</visible>
 			</control>
 
 			<!-- Overlay -->
 			<control type="image">
-				<include>FullscreenDimensions</include>
+				<include condition="!Skin.HasSetting(Cinemascope)">FullscreenDimensions</include>
+				<include condition="Skin.HasSetting(Cinemascope)">CinemascopeDimensions</include>
 				<texture background="true">$INFO[Skin.String(OSMCBackgroundOverlay),overlays/,.png]</texture>
 				<colordiffuse>$VAR[BackgroundColor]</colordiffuse>
 				<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
@@ -94,7 +108,8 @@
 				<param name="animate">True</param>
 			</include>
 			<control type="image">
-				<include>FullscreenDimensions</include>
+				<include condition="!Skin.HasSetting(Cinemascope)">FullscreenDimensions</include>
+				<include condition="Skin.HasSetting(Cinemascope)">CinemascopeDimensions</include>
 				<include>WindowFadeAnimation</include>
 				<texture colordiffuse="$VAR[DarkenColor]">dialogs/DialogTextBackground.png</texture>
 			</control>
@@ -104,7 +119,8 @@
 	<!-- Dialog fade background image -->
 	<include name="DialogFadeBackgroundImage">
 		<control type="image">
-			<include>FullscreenDimensions</include>
+			<include condition="!Skin.HasSetting(Cinemascope)">FullscreenDimensions</include>
+			<include condition="Skin.HasSetting(Cinemascope)">CinemascopeDimensions</include>
 			<texture colordiffuse="$VAR[DarkenColor]">dialogs/DialogTextBackground.png</texture>
 			<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
@@ -114,7 +130,8 @@
 	<!-- Options background image -->
 	<include name="OptionsBackgroundImage">
 		<control type="image">
-			<include>FullscreenDimensions</include>
+			<include condition="!Skin.HasSetting(Cinemascope)">FullscreenDimensions</include>
+			<include condition="Skin.HasSetting(Cinemascope)">CinemascopeDimensions</include>
 			<texture border="20">dialogs/OptionsBackground.png</texture>
 		</control>
 	</include>

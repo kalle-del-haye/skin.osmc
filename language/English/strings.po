@@ -564,3 +564,8 @@ msgstr ""
 msgctxt "#31119"
 msgid "Disabled"
 msgstr ""
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31120"
+msgid "Cinemascope mode (Set Interface/Skins/Zoom to -16 %)"
+msgstr ""

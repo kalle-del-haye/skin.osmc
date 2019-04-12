@@ -680,6 +680,16 @@
 					<onclick>Skin.ToggleSetting(KioskMode)</onclick>
 					<selected>Skin.HasSetting(KioskMode)</selected>
 				</control>
+				<!-- Cinemascope mode -->
+				<control type="radiobutton" id="307">
+					<width>1220</width>
+					<height>66</height>
+					<textwidth>1120</textwidth>
+					<font>Font33</font>
+					<label>31120</label>
+					<onclick>Skin.ToggleSetting(Cinemascope)</onclick>
+					<selected>Skin.HasSetting(Cinemascope)</selected>
+				</control>
 			</control>
 
 			<!-- Addons -->

@@ -11,7 +11,8 @@
 
 		<!-- Visualisation -->
 		<control type="visualisation" id="2">
-			<include>FullscreenDimensions</include>
+			<include condition="!Skin.HasSetting(Cinemascope)">FullscreenDimensions</include>
+			<include condition="Skin.HasSetting(Cinemascope)">CinemascopeDimensions</include>
 			<visible>Player.HasAudio</visible>
 		</control>
 

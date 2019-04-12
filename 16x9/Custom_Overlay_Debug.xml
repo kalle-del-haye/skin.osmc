@@ -4,6 +4,27 @@
 	<visible>!Window.IsVisible(startup)</visible>
 	<controls>
 
+		<!-- Cinemascope bars -->
+
+		<control type="image">
+			<left>-183</left>
+			<top>-103</top>
+			<width>2286</width>
+			<height>157</height>
+			<texture>dialogs/Background.png</texture>
+			<colordiffuse>ff000000</colordiffuse>
+			<visible>Skin.HasSetting(Cinemascope)</visible>
+		</control>
+		<control type="image">
+			<left>-183</left>
+			<top>1026</top>
+			<width>2286</width>
+			<height>157</height>
+			<texture>dialogs/Background.png</texture>
+			<colordiffuse>ff000000</colordiffuse>
+			<visible>Skin.HasSetting(Cinemascope)</visible>
+		</control>
+
 		<!-- Global debug grid -->
 
 		<control type="image">
