@@ -931,7 +931,7 @@
 				<include>VisibleFadeAnimation</include>
 			</control>
 			<control type="image">
-				<left>0</left>
+				<left>-1000</left>
 				<bottom>90</bottom>
 				<width>3980</width>
 				<height>86</height>

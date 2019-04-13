@@ -9,16 +9,23 @@
 	<controls>
 		<control type="group">
 			<visible>Player.Caching + String.IsEqual(Window(10000).Property(isCaching),True)</visible>
-			<left>1920</left>
+			<left>2120</left>
 			<width>550</width>
-			<animation effect="slide" end="-550,0" time="200">Visible</animation>
-			<animation effect="slide" end="0,0" time="200">Hidden</animation>
+			<animation effect="slide" end="-750,0" time="250">Visible</animation>
+			<animation effect="slide" end="0,0" time="250">Hidden</animation>
 
 			<control type="image">
-				<right>0</right>
+				<right>-200</right>
 				<top>110</top>
-				<width>550</width>
+				<width>750</width>
 				<height>40</height>
+				<texture colordiffuse="$VAR[OverlayColor]">dialogs/Background.png</texture>
+			</control>
+			<control type="image">
+				<right>-200</right>
+				<top>150</top>
+				<width>200</width>
+				<height>4</height>
 				<texture colordiffuse="$VAR[OverlayColor]">dialogs/Background.png</texture>
 			</control>
 
@@ -52,7 +59,7 @@
 				<width>550</width>
 				<height>2</height>
 				<visible>true</visible>
-				<midtexture colordiffuse="OSDCache">common/white.png</midtexture>
+				<midtexture colordiffuse="$VAR[OSDCache]">common/white.png</midtexture>
 				<info>Player.ProgressCache</info>
 			</control>
 		</control>

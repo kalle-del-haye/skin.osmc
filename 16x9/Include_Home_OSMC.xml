@@ -83,8 +83,8 @@
 		<!-- Sub Menu -->
 		<control type="group" id="9010">
 			<animation effect="slide" time="200" end="-220,0" condition="Integer.IsEqual(Container(9001).NumItems,0)">Conditional</animation>
-			<animation effect="slide" time="200" start="-200,0" end="0,0" condition="Integer.IsGreater(Container(9001).NumItems,0)">WindowOpen</animation>
-			<animation effect="slide" time="200" start="0,0" end="-200,0" condition="Integer.IsGreater(Container(9001).NumItems,0)">WindowClose</animation>
+			<animation effect="slide" time="200" start="-220,0" end="0,0" condition="Integer.IsGreater(Container(9001).NumItems,0)">WindowOpen</animation>
+			<animation effect="slide" time="200" start="0,0" end="-220,0" condition="Integer.IsGreater(Container(9001).NumItems,0)">WindowClose</animation>
 			<control type="image">
 				<include condition="!Skin.HasSetting(Cinemascope)">FullscreenDimensions</include>
 				<include condition="Skin.HasSetting(Cinemascope)">CinemascopeDimensions</include>
